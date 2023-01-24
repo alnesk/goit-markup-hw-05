@@ -222,6 +222,9 @@ body {
     border-radius: 50%;
     border: 1px solid rgba(0, 0, 0, 0.1);
 }
+.close-hero:hover{
+    background-color: var(--hover);
+}
 .modal-close-bottom-icon{
     width: 8px;
     height: 8px;
@@ -229,7 +232,6 @@ body {
 }
 .modal-close-bottom-icon:hover{
     fill: var(--without);
-    background-color: var(--hover);
 }
 /* Company's quality */
 .quality-section{
