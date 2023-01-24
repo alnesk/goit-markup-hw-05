@@ -390,12 +390,10 @@ body {
     margin-left: 0;
 }
 .customer-item:hover{
-    border: 1px solid var(--hover);
-    background: var(--hover);
+    border: var(--hover);
 }
 .customer-item:focus{
-    border: 1px solid var(--hover);
-    background: var(--hover);
+    border: var(--hover);
 }
 .customer-link{
     display: flex;
@@ -404,10 +402,10 @@ body {
     align-items: center;
     justify-content: center;
 }
-.customer-link:hover{
+.customer-icon:hover{
     fill: var(--hover);
 }
-.customer-link:focus{
+.customer-icon:focus{
     fill: var(--hover);
 }
 /* Footer */
