@@ -110,6 +110,7 @@ body {
     text-decoration: none;
     line-height: 1.5;
     color: var(--body_text);
+    transition: clar 250ms var(--timing-function);
 }
 .auth-nav a:hover{
     cursor: pointer;
@@ -221,7 +222,16 @@ body {
     border-radius: 50%;
     border: 1px solid rgba(0, 0, 0, 0.1);;
 }
-
+.close-hero:hover{
+    background-color: var(--hover);
+}
+.modal-close-bottom-icon{
+    width: 24px;
+    height: 24px;
+}
+.modal-close-bottom-icon:hover{
+    color: var(--without);
+}
 /* Company's quality */
 .quality-section{
     padding-top: 120px;
@@ -525,6 +535,31 @@ body {
 .work-image{
     text-decoration: none;
     background: var(--without);
+
+    position: relative;
+
+    overflow: hidden;
+}
+.work-image:hover .overlay {
+    transform: translateY(0);
+}
+.overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #3f51b5;
+  
+    transform: translateY(100%);
+    transition: transform 250ms ease;
+}
+.overlay > p {
+    width: 296px;
+    color: #fff;
+    padding-top: 40px;
+    margin-left: 32px;
+    font-size: 18px;
 }
 .work-image:hover{
     box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
