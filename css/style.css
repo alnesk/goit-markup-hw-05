@@ -215,6 +215,8 @@ body {
     width: 100%;
     height: 100%;
     background: rgba(46, 47, 66, 0.4);
+    opacity: 1;
+    transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .is-hidden{
@@ -255,10 +257,6 @@ body {
     height: 8px;
     fill: var(--hover);
 }
-/* .modal-close-bottom-icon:hover{
-    cursor: pointer;
-    fill: var(--without);
-} */
 /* Company's quality */
 .quality-section{
     padding-top: 120px;
@@ -393,48 +391,66 @@ body {
     padding-bottom: 32px;
 }
 /* CUSTOMER */
-.customer{
-    padding-top: 120px;
-    padding-bottom: 120px;
+.section-title {
+    margin-top: 0;
+    margin-bottom: 70px;
+    color: var(--dark);
+    text-align: center;
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 1.1;
 }
-.customer-list{
-    display: flex;
-    justify-content: center;
+
+.customers {
+    padding: 120px 0 130px 0;
 }
-.customer-item{
-    content: "";
-    display: block;
-    width: 168px;
+
+.customers-content{
+    display:flex;
+    gap:24px;
+}
+
+.customers-banner{
+    width: calc((100% - 120px) / 6);
     height: 88px;
-    background-color: var(--without);
-    background-repeat: no-repeat;
-    background-position: center;
-    border: 1px solid #8E8F99;
-    border-radius: 4px;
-    margin-left: 24px;
-    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-.customer-item:first-child{
-    margin-left: 0;
-}
-.customer-item:hover{
-    border: var(--hover);
-}
-.customer-item:focus{
-    border: var(--hover);
-}
-.customer-link{
-    display: flex;
+    
+.customers-link{
+    display:flex;
     width: 100%;
     height: 100%;
-    align-items: center;
+    border:1px  solid #8E8F99 ;
+    border-radius:4px;
+
+    align-items:center;
     justify-content: center;
+
+    transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-.customer-icon:hover{
-    fill: var(--hover);
+
+
+.customers-logo{
+    width: 104px;
+    height: 56px;
+
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-.customer-icon:focus{
-    fill: var(--hover);
+
+.customers-logo{
+    fill: #8E8F99;
+    
+}
+
+.customers-logo:hover {
+    fill: var(--hover) !important;
+}
+
+.customers-link:hover{
+    border-color: var(--hover);
+}
+.customers-link:hover .customers-logo{
+    fill:var(--hover)
 }
 /* Footer */
 .page-footer{
@@ -536,12 +552,11 @@ body {
     border: 1px solid #E7E9FC;
     border-radius: 4px;
     color: var(--primary_brand);
-    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), color 250ms cubic-bezier(0.4, 0, 0.2, 1), box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .button-text:hover{
     background: var(--hover);
     box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 2px 1px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
-    border-radius: 4px;
     color: var(--without);
     cursor: pointer;
 }
@@ -564,7 +579,6 @@ body {
 .work-image{
     text-decoration: none;
     background: var(--without);
-
     position: relative;
 
     overflow: hidden;
