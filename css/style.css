@@ -249,9 +249,9 @@ body {
     cursor: pointer;
     background-color: var(--hover);
 }
-.close-hero:hover .modal-close-bottom-icon{
+/* .close-hero:hover .modal-close-bottom-icon{
     fill: var(--without);
-}
+} */
 .modal-close-bottom-icon{
     width: 8px;
     height: 8px;
