@@ -88,6 +88,7 @@ body {
     font-weight: 600;
     line-height: 1.5;
     color: var(--dark);
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .site-nav a:hover{
     cursor: pointer;
@@ -110,18 +111,17 @@ body {
     text-decoration: none;
     line-height: 1.5;
     color: var(--body_text);
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .auth-nav a:hover{
     cursor: pointer;
     color: var(--hover);
-    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .auth-nav a:focus{
     color: var(--hover);
 }
 .site-item{
     position: relative;
-    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .site-item::after{
     content: '';
@@ -157,6 +157,9 @@ body {
     background: var(--hover);
     border-radius: 2px;
     opacity: 1;
+}
+.current >.header-link {
+    color: #4D5AE5FF;
 }
 /* Hero */
 .hero{
@@ -241,16 +244,21 @@ body {
     border: 1px solid rgba(0, 0, 0, 0.1);
 }
 .close-hero:hover{
+    cursor: pointer;
     background-color: var(--hover);
+}
+.close-hero:hover .modal-close-bottom-icon{
+    fill: var(--without);
 }
 .modal-close-bottom-icon{
     width: 8px;
     height: 8px;
     fill: var(--hover);
 }
-.modal-close-bottom-icon:hover{
+/* .modal-close-bottom-icon:hover{
+    cursor: pointer;
     fill: var(--without);
-}
+} */
 /* Company's quality */
 .quality-section{
     padding-top: 120px;
